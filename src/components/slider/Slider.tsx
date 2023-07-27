@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper";
+import {theme} from "../../styles/Theme";
 
 export const Slider = () => {
     return (
@@ -10,12 +11,12 @@ export const Slider = () => {
                     <Text>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </Text>
-                    <Name>@ivan ivanow</Name>
+                    <Name>@ivan ivanov</Name>
                 </Slide>
             </FlexWrapper>
             <Pagination>
                 <span></span>
-                <span></span>
+                <span className={"active"}></span>
                 <span></span>
             </Pagination>
         </StyledSlider>
@@ -35,15 +36,30 @@ const Text = styled.p`
 `
 
 const Name = styled.span`
-
+  font-family: Josefin Sans,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 22px 0 42px;
 `
 
 const Pagination = styled.div`
   span {
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 5px;
-    background-color: #ff12b4;
+    width: 7px;
+    height: 7px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+    & + span {
+      margin-left: 5px;
+    }
+    
+    &.active {
+      background-color: ${theme.colors.accent};
+      width: 20px;
+    }
   }
 `

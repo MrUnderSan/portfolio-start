@@ -3,14 +3,17 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Container} from "../../../components/Container";
 
 export const Slogan = () => {
     return (
         <StyledSlogan>
-            <SectionTitle>I Am Available For Freelance</SectionTitle>
-            <FlexWrapper justify={"center"}>
-                <Button>Hire me</Button>
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>I Am Available For Work</SectionTitle>
+                <FlexWrapper justify={"center"}>
+                    <Button>Hire me</Button>
+                </FlexWrapper>
+            </Container>
 
         </StyledSlogan>
     );
