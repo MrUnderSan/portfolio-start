@@ -18,6 +18,10 @@ export const GlobalStyle = createGlobalStyle `
     -moz-osx-font-smoothing: grayscale;
     color: ${theme.colors.font};
     line-height: 1.2;
+
+    @media (prefers-reduced-motion: reduce) {
+       animation: unset;
+    }
   }
   
   a {
