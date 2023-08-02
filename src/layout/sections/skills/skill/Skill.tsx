@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {theme} from "../../../../styles/Theme";
 
 type SkillPropsType = {
     iconId: string
@@ -28,6 +29,14 @@ const StyledSkill = styled.div`
   text-align: center;
   width: 380px;
   padding: 62px 20px 40px;
+  
+  @media ${theme.media.tablet} {
+    padding: 62px 0 40px;
+  }
+  
+  @media screen and (max-width: 450px) {
+    width: 330px;
+  }
 
 
 `
