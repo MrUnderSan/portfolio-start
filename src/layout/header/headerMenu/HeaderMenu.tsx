@@ -27,10 +27,14 @@ export const HeaderMenu = (props: {menuItems: Array<string>}) => {
 
 
 const StyledHeaderMenu = styled.nav`
-    ul {
-      display: flex;
-      gap: 30px;
-    }      
+  ul {
+    display: flex;
+    gap: 30px;
+  }
+  
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `
 
 
