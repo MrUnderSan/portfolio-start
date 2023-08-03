@@ -26,7 +26,6 @@ export const SectionTitle = styled.h2`
     @media ${theme.media.mobile} {
       bottom: -24px;
     }
-
   }
   
   @media ${theme.media.mobile} {
