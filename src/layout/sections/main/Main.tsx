@@ -10,7 +10,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
+                <FlexWrapper align={"center"} justify={"space-between"}>
                     <div>
                         <SmallText>Hi There</SmallText>
                         <Name>I am <NameSpan><span>Aliaksandr</span> <span>Yurhilevich</span></NameSpan></Name>
@@ -95,6 +95,10 @@ const Photo = styled.img`
 const MainTitle = styled.h1`
   ${font({weight: 400, fMax: 27, fMin: 20})}
 
+  @media ${theme.media.desktop} {
+    font-size: 27px;
+  }
+
 `
 
 const Name = styled.p`
@@ -109,6 +113,11 @@ const Name = styled.p`
   @media ${theme.media.mobile} {
     margin: 15px 0 22px;
   }
+
+  @media ${theme.media.desktop} {
+    font-size: 50px;
+  }
+  
 `
 
 const NameSpan = styled.span `
