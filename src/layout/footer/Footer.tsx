@@ -45,7 +45,7 @@ const StyledFooter = styled.footer`
 `
 const SocialList = styled.ul`
   display: flex;
-  gap: 30px;
+  gap: 20px;
   margin: 30px 0;
     
 `
