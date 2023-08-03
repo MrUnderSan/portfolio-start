@@ -29,6 +29,6 @@ const StyledTestimony = styled.section`
   text-align: center;
   
   ${IconWrapper} {
-    margin: 40px 0 70px;
+    margin: 30px 0 70px;
   }
 `
