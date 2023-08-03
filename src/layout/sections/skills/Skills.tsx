@@ -1,37 +1,60 @@
 import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from '../../../components/SectionTitle';
-import styled from "styled-components";
 import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
-import {theme} from "../../../styles/Theme";
+import {S} from "./Skills_Styles"
 
+const skillData = [
+    {
+        iconId: "code",
+        skillTitle: "HTML5",
+        skillText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+    },
+    {
+        iconId: "css",
+        skillTitle: "css3",
+        skillText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+    },
+    {
+        iconId: "react",
+        skillTitle: "React",
+        skillText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+    },
+    {
+        iconId: "typeScript",
+        skillTitle: "typescript",
+        skillText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+    },
+    {
+        iconId: "styledComponents",
+        skillTitle: "styled components",
+        skillText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+    },
+    {
+        iconId: "figma",
+        skillTitle: "Web design",
+        skillText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
+    }
+]
 export const Skills = () => {
     return (
-        <StyledSkills>
+        <S.Skills>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper justify={"center"} wrap={"wrap"}>
-                    <Skill iconId={"code"} skillTitle={"html5"} skillText={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
-                    <Skill iconId={"css"} skillTitle={"css3"} skillText={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
-                    <Skill iconId={"react"} skillTitle={"React"} skillText={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
-                    <Skill iconId={"typeScript"} skillTitle={"typescript"} skillText={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
-                    <Skill iconId={"styledComponents"} skillTitle={"styled components"} skillText={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
-                    <Skill iconId={"figma"} skillTitle={"Web design"} skillText={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"}/>
+
+                    {
+                        skillData.map((s, index) => {
+                            return (
+                                <Skill key={index} iconId={s.iconId} skillTitle={s.skillTitle} skillText={s.skillText}/>
+                            )
+                        })
+                    }
+
                 </FlexWrapper>
             </Container>
-
-
-        </StyledSkills>
+        </S.Skills>
     );
 };
 
-const StyledSkills = styled.section`
-  
-  @media ${theme.media.mobile} {
-    ${SectionTitle} {
-      bottom: -36px;
-    }
-  }
-
-`
