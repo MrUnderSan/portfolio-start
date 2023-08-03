@@ -50,7 +50,6 @@ const StyledMain = styled.section`
 const PhotoWrapper = styled.div`
   position: relative;
   z-index: 0;
-  margin-top: 65px;
   
   &::before {
     content: "";
@@ -70,6 +69,10 @@ const PhotoWrapper = styled.div`
       top: -17px;
       left: 20px;
     }
+  }
+
+  @media screen and (max-width: 930px) {
+    margin-top: 65px;
   }
 `
 
