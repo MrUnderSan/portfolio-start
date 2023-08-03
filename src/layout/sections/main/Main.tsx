@@ -137,7 +137,7 @@ const NameSpan = styled.span `
         z-index: -1;
     }
 
-    @media screen and (max-width: 1140px) {
+    @media screen and (max-width: 1150px) {
         display: flex;
     }
     
