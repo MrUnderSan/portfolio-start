@@ -28,7 +28,7 @@ export const Skill = (props: SkillPropsType) => {
 const StyledSkill = styled.div`
   text-align: center;
   width: 380px;
-  padding: 62px 20px 40px;
+  padding: 45px 20px 50px;
   
   @media ${theme.media.tablet} {
     padding: 62px 0 40px;
