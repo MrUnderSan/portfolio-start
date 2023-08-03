@@ -4,6 +4,7 @@ import {SectionTitle} from '../../../components/SectionTitle';
 import styled from "styled-components";
 import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Skills = () => {
     return (
@@ -26,5 +27,11 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
+  
+  @media ${theme.media.mobile} {
+    ${SectionTitle} {
+      bottom: -36px;
+    }
+  }
 
 `
