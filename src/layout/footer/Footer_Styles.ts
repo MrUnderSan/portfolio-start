@@ -22,6 +22,7 @@ const SocialItem = styled.li`
 const SocialLink = styled.a`
   width: 35px;
   height: 35px;
+  transition: ${theme.animations.transition};
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.10);
   
