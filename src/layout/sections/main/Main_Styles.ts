@@ -70,7 +70,10 @@ const Photo = styled.img`
 `
 
 const MainTitle = styled.h1`
-  ${font({weight: 400, fMax: 27, fMin: 20})}
+  ${font({weight: 400, fMax: 27, fMin: 20})};
+  p {
+    display: none;
+  }
 
   @media ${theme.media.desktop} {
     font-size: 27px;
