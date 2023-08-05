@@ -1,20 +1,53 @@
 import React from 'react';
 import {S} from '../HeaderMenu_Styles'
 
-export const Menu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
+const items = [
+    {
+        title: "Home",
+        id: "home"
+    },
+    {
+        title: "Skills",
+        id: "skills"
+    },
+    {
+        title: "Works",
+        id: "works"
+    },
+    {
+        title: "Testimony",
+        id: "testimony"
+    },
+    {
+        title: "Contact",
+        id: "contact"
+    }
+]
+type MenuProps = {
+    setMenuIsOpen?: (isOpen: boolean)=> void
+}
+
+export const Menu: React.FC<MenuProps> = ({setMenuIsOpen}) => {
     return (
         <ul>
-            {props.menuItems.map((item, index)=> {
+            {items.map((item, index)=> {
                 return <S.MenuItem key={index}>
-                    <S.Link href="">
-                        {item}
-                        <S.Mask>
-                            <span>{item}</span>
-                        </S.Mask>
-                        <S.Mask>
-                            <span>{item}</span>
-                        </S.Mask>
-                    </S.Link>
+                        <S.MenuLink
+                            activeClass="active"
+                            smooth={true}
+                            to={item.id}
+                            spy={true}
+                            onClick= {()=>{setMenuIsOpen && setMenuIsOpen(false)}}
+                        >
+                            {item.title}
+                            <S.Mask>
+                                <span>{item.title}</span>
+                            </S.Mask>
+                            <S.Mask>
+                                <span>{item.title}</span>
+                            </S.Mask>
+                        </S.MenuLink>
+
                 </S.MenuItem>
             })}
         </ul>
