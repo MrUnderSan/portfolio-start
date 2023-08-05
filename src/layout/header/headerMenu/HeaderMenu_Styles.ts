@@ -32,6 +32,7 @@ const MenuLink= styled(Link)`
   font-weight: 400;
   color: transparent;
   cursor: pointer;
+  user-select: none;
 
   &::before {
     content: "";
