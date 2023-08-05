@@ -6,6 +6,7 @@ import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {S} from "../skills/Skills_Styles";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Testimony: React.FC = () => {
     return (
@@ -29,6 +30,8 @@ const StyledTestimony = styled.section`
   
   ${S.IconWrapper} {
     margin: 30px 0 70px;
+    color: ${theme.colors.accent};
   }
+
   
 `
